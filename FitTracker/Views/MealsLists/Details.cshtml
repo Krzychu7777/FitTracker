@@ -1,0 +1,44 @@
+﻿@model FitTracker.Models.MealsList
+
+<head>
+    <link rel="stylesheet" href="~/css/mealsList.css" asp-append-version="true" />
+</head>
+
+<div class="details-meals-list-wrapper">
+    <h1>Sczegóły posiłku</h1>
+    <div class="form-wrapper">
+        <dl class="row">
+            <dt class="col-12">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="ccol-12">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-12">
+                @Html.DisplayNameFor(model => model.Calories)
+            </dt>
+            <dd class="col-12">
+                @Html.DisplayFor(model => model.Calories)
+            </dd>
+            @if (!string.IsNullOrEmpty(Model.Description)) 
+            {
+                <dt class="col-12">
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd class="col-12">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+            }
+            <dt class="col-12">
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+            <dd class="col-12">
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+        </dl>
+    </div>
+    <div class="links-wrapper">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="edit-link">Zapisz</a>
+        <a asp-action="Index" class="back-to-list-link">Wróć do listy</a>
+    </div>
+</div>

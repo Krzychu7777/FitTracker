@@ -1,0 +1,35 @@
+﻿@model FitTracker.Models.ExercisesList
+
+<head>
+    <link rel="stylesheet" href="~/css/exercisesList.css" asp-append-version="true" />
+</head>
+
+<div class="details-exercises-list-wrapper">
+    <h1>Szczegóły ćwiczenia</h1>
+    <div class="form-wrapper">
+        <dl class="row">
+            <dt class="col-12">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-12">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-12">
+                @Html.DisplayNameFor(model => model.BurnedCalories)
+            </dt>
+            <dd class="col-12">
+                @Html.DisplayFor(model => model.BurnedCalories)
+            </dd>
+            <dt class="col-12">
+                @Html.DisplayNameFor(model => model.TrainingAt)
+            </dt>
+            <dd class="col-12">
+                @Html.DisplayFor(model => model.TrainingAt)
+            </dd>
+        </dl>
+    </div>
+    <div class="links-wrapper">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="edit-link">Zapisz</a>
+        <a asp-action="Index" class="back-to-list-link">Wróć do listy</a>
+    </div>
+</div>

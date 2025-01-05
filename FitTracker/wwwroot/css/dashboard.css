@@ -1,0 +1,97 @@
+﻿body {
+    background-color: #f8fafc;
+}
+.dashboard-wrapper {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.dashboard-wrapper__banner {
+    width: 100%;
+    height: 150px;
+    background-color: #e2e8f0;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.dashboard-wrapper h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.dashboard-wrapper h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.dashboard-wrapper h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.dashboard-wrapper .dashboard-wrapper__details {
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #e2e8f0;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+}
+
+.dashboard-wrapper .dashboard-wrapper__details p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.dashboard-wrapper .dashboard-lists-wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.dashboard-wrapper .dashboard-lists-wrapper__meals,
+.dashboard-wrapper .dashboard-lists-wrapper__exercises {
+    flex: 1;
+    padding: 15px;
+    background-color: #f1f5f9; 
+    border-radius: 8px;
+}
+
+.dashboard-wrapper ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-wrapper ul li {
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.dashboard-wrapper ul li:last-child {
+    border-bottom: none;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .dashboard-wrapper .dashboard-lists-wrapper {
+        flex-direction: column;
+    }
+
+    .dashboard-wrapper {
+        padding: 15px;
+    }
+
+    .dashboard-wrapper h1 {
+        font-size: 1.5rem;
+    }
+
+    .dashboard-wrapper h2 {
+        font-size: 1.25rem;
+    }
+
+    .dashboard-wrapper h3 {
+        font-size: 1rem;
+    }
+}

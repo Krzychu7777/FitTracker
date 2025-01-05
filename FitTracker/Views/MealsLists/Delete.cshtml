@@ -1,0 +1,44 @@
+﻿@model FitTracker.Models.MealsList
+
+<head>
+    <link rel="stylesheet" href="~/css/mealsList.css" asp-append-version="true" />
+</head>
+
+<div class="delete-meals-list-wrapper">
+    <h1>Usuń posiłek</h1>
+    <h3>Jestes pewien że chcesz usunąć ten posiłek z listy?</h3>
+    <div class="form-wrapper">
+        <dl class="row">
+            <dt class="col-12">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-12">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-12">
+                @Html.DisplayNameFor(model => model.Calories)
+            </dt>
+            <dd class="col-12">
+                @Html.DisplayFor(model => model.Calories)
+            </dd>
+            <dt class="col-12">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd class="col-12">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt class="col-12">
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+            <dd class="col-12">
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete" class="links-wrapper">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Usuń" class="btn btn-danger" />
+            <a asp-action="Index" class="back-to-list-link">Wróć do listy</a>
+        </form>
+    </div>
+</div>

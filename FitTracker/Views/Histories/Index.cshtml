@@ -1,0 +1,67 @@
+﻿@model History
+
+<head>
+    <link rel="stylesheet" href="~/css/history.css" asp-append-version="true" />
+</head>
+
+<div class="history-wrapper">
+    <h1>Historia posiłków i ćwiczeń</h1>
+    <h2>Od @Model.StartDate.ToShortDateString() do @Model.EndDate.ToShortDateString()</h2>
+
+    <form method="get" class="history-wrapper__filter-form">
+        <div class="input-wrapper">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" name="startDate" value="@Model.StartDate.ToString("yyyy-MM-dd")" />
+        </div>
+
+        <div class="input-wrapper">
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" name="endDate" value="@Model.EndDate.ToString("yyyy-MM-dd")" />
+        </div>
+
+        <button type="submit">Filtr</button>
+    </form>
+
+    <div class="history-wrapper__summary">
+        <h3>Podsumowanie</h3>
+        <p>Suma kalorii dziś: @Model.TotalCalories kcal</p>
+        <p>Suma ćwiczeń dziś: @Model.TotalExercises</p>
+        <p>Suma spalonych kalorii dzisiaj: @Model.TotalBurnedCalories kcal</p>
+        <p>Balans kalorii dziś: @Model.CaloriesBalance kcal</p>
+    </div>
+
+   <div class="history-lists-wrapper">
+        <div class="history-lists-wrapper__meals">
+            <h3>Posiłki</h3>
+            @if (Model.Meals.Any())
+            {
+                <ul>
+                    @foreach (var meal in Model.Meals)
+                    {
+                        <li>@meal.Name - @meal.Calories kcal (@meal.Date.ToShortTimeString())</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>Brak posiłków na dziś.</p>
+            }
+        </div>
+        <div class="history-lists-wrapper__exercises">
+            <h3>Exercises</h3>
+            @if (Model.Exercises.Any())
+            {
+                <ul>
+                    @foreach (var exercise in Model.Exercises)
+                    {
+                        <li>@exercise.Name (@exercise.TrainingAt.ToShortTimeString())</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>Brak ćwiczeń na dziś.</p>
+            }
+        </div>
+   </div>
+</div>

@@ -1,0 +1,43 @@
+﻿@model FitTracker.Models.ExercisesList
+
+<head>
+    <link rel="stylesheet" href="~/css/exercisesList.css" asp-append-version="true" />
+</head>
+
+<div class="edit-exercises-wrapper">
+    <h1>Edytuj ćwiczenie</h1>
+    <div class="row form-wrapper">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="BurnedCalories" class="control-label"></label>
+                    <input asp-for="BurnedCalories" class="form-control" />
+                    <span asp-validation-for="BurnedCalories" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TrainingAt" class="control-label"></label>
+                    <input asp-for="TrainingAt" class="form-control" />
+                    <span asp-validation-for="TrainingAt" class="text-danger"></span>
+                </div>
+                <div class="form-group add-link">
+                    <input type="submit" value="Zapisz" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="back-list-wrapper">
+        <a asp-action="Index">Wróć do listy</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,182 @@
+﻿.exercises-list-wrapper .add-button-wrapper {
+	margin-top: 32px;
+}
+
+	.exercises-list-wrapper .add-button-wrapper a {
+		display: block;
+		width: fit-content;
+		background-color: #0d6efd;
+		color: white;
+		padding: 8px 16px;
+		border-radius: 8px;
+		text-decoration: none;
+		transition: 0.3s ease-in-out;
+	}
+
+	.exercises-list-wrapper .add-button-wrapper a:hover {
+		background-color: #0b5ed7;
+	}
+
+.exercises-list-wrapper table {
+	margin-top: 32px;
+	border-radius: 8px;
+	overflow: hidden;
+	background-color: #f1f5f9;
+}
+
+.exercises-list-wrapper table thead {
+	background-color: #cbd5e1;
+}
+
+.exercises-list-wrapper table thead th {
+	border: none;
+}
+
+
+.exercises-list-wrapper table tbody tr:nth-child(even) {
+	background-color: #e2e8f0;
+}
+
+.exercises-list-wrapper table tbody td {
+	border: none;
+}
+
+.exercises-list-wrapper table tbody td a {
+	text-decoration: none;
+	padding: 2px 6px;
+	border-radius: 6px;
+	border: 1px solid #0d6efd;
+	font-size: 14px;
+	transition: 0.3s ease-in-out;
+}
+
+.exercises-list-wrapper table tbody td a:hover {
+	background-color: #0d6efd;
+	color: white;
+}
+
+.exercises-list-wrapper table tbody td a.delete {
+	color: #dc2626;
+	border: 1px solid #dc2626;
+}
+
+.exercises-list-wrapper table tbody td a.delete:hover {
+	background-color: #dc2626;
+	color: white;
+}
+
+
+/*Create and Edit*/
+
+.create-exercises-wrapper .form-wrapper,
+.edit-exercises-wrapper .form-wrapper {
+	margin-top: 32px;
+}
+
+.create-exercises-wrapper .form-group,
+.edit-exercises-wrapper .form-group {
+	margin-top: 8px;
+}
+
+.create-exercises-wrapper .form-group.add-link,
+.edit-exercises-wrapper .form-group.add-link {
+	margin-top: 16px
+}
+
+.create-exercises-wrapper .back-list-wrapper,
+.edit-exercises-wrapper .back-list-wrapper {
+	margin-top: 12px
+}
+
+.create-exercises-wrapper .back-list-wrapper a,
+.edit-exercises-wrapper .back-list-wrapper a {
+	text-decoration: none;
+	padding: 6px 12px;
+	border: 1px solid #0d6efd;
+	border-radius: 4px;
+	display: block;
+	width: fit-content;
+	transition: 0.3s ease-in-out;
+}
+
+.create-exercises-wrapper .back-list-wrapper a:hover,
+.edit-exercises-wrapper .back-list-wrapper a:hover {
+	background-color: #0d6efd;
+	color: white;
+}
+
+
+.details-exercises-list-wrapper .form-wrapper {
+	margin-top: 32px;
+	background-color: #f1f5f9;
+	border-radius: 8px;
+	padding: 24px;
+	margin-bottom: 16px;
+	width: fit-content;
+}
+
+.details-exercises-list-wrapper .links-wrapper {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+.details-exercises-list-wrapper .links-wrapper a {
+	display: block;
+	width: fit-content;
+	background-color: #0d6efd;
+	color: white;
+	padding: 8px 16px;
+	border-radius: 8px;
+	text-decoration: none;
+	transition: 0.3s ease-in-out;
+}
+
+.details-exercises-list-wrapper .links-wrapper a.back-to-list-link {
+	background-color: transparent;
+	color: #0d6efd;
+	border: 1px solid #0d6efd;
+	transition: 0.3s ease-in-out;
+}
+
+.details-exercises-list-wrapper .links-wrapper a.back-to-list-link:hover {
+	background-color: #0d6efd;
+	color: white;
+}
+
+.details-exercises-list-wrapper .links-wrapper a.back-to-list-link:hover {
+	background-color: #0d6efd;
+	color: white;
+}
+
+/*Delete record in list*/
+
+.delete-exercises-list-wrapper .form-wrapper {
+	margin-top: 32px;
+	background-color: #f1f5f9;
+	border-radius: 8px;
+	padding: 24px;
+	margin-bottom: 16px;
+	width: fit-content;
+}
+
+.delete-exercises-list-wrapper .form-wrapper .links-wrapper {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+.delete-exercises-list-wrapper .form-wrapper .links-wrapper .back-to-list-link {
+	text-decoration: none;
+	padding: 6px 12px;
+	border: 1px solid #0d6efd;
+	border-radius: 4px;
+	display: block;
+	width: fit-content;
+	transition: 0.3s ease-in-out;
+}
+
+.delete-exercises-list-wrapper .form-wrapper .links-wrapper .back-to-list-link:hover {
+	background-color: #0d6efd;
+	color: white;
+}

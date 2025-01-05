@@ -1,0 +1,50 @@
+﻿@model Dashboard
+
+<head>
+    <link rel="stylesheet" href="~/css/dashboard.css" asp-append-version="true" />
+</head>
+
+<div class="dashboard-wrapper">
+    <h1>Panel użytkownika</h1>
+    <h2>Witaj @Model.UserName</h2>
+    <div class="dashboard-wrapper__details">
+        <p>Suma kalorii dziś: @Model.TotalCalories kcal</p>
+        <p>Suma ćwiczeń dziś: @Model.TotalExercises</p>
+        <p>Suma spalonych kalorii dzisiaj: @Model.TotalBurnedCalories kcal</p>
+        <p>Balans kalorii dziś: @Model.CaloriesBalance kcal</p>
+    </div>
+    <div class="dashboard-lists-wrapper">
+        <div class="dashboard-lists-wrapper__meals">
+            <h3>Dzisiejsze posiłki</h3>
+            @if (Model.Meals.Any()) 
+            {
+                <ul>
+                    @foreach (var meal in Model.Meals)
+                    {
+                        <li>@meal.Name - @meal.Calories kcal (@meal.Date.ToShortTimeString())</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>Brak posiłków na dziś.</p>
+            }
+        </div>
+        <div class="dashboard-lists-wrapper__exercises">
+            <h3>Dzisiejsze ćwiczenia</h3>
+            @if (Model.Exercises.Any()) 
+            {
+                <ul>
+                    @foreach (var exercise in Model.Exercises)
+                    {
+                        <li>@exercise.Name (@exercise.TrainingAt.ToShortTimeString())</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>Brak ćwiczeń na dziś.</p> 
+            }
+        </div>
+    </div>
+</div>

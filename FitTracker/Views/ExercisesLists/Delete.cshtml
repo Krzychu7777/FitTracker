@@ -1,0 +1,38 @@
+﻿@model FitTracker.Models.ExercisesList
+
+<head>
+    <link rel="stylesheet" href="~/css/exercisesList.css" asp-append-version="true" />
+</head>
+
+<div class="details-exercises-list-wrapper">
+    <h1>Usuń ćwiczenie</h1>
+    <h3>Jestes pewien że chcesz usunąć to ćwiczenie z listy?</h3>
+    <div class="form-wrapper">
+        <dl class="row">
+            <dt class="col-12">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-12">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-12">
+                @Html.DisplayNameFor(model => model.BurnedCalories)
+            </dt>
+            <dd class="col-12">
+                @Html.DisplayFor(model => model.BurnedCalories)
+            </dd>
+            <dt class="col-12">
+                @Html.DisplayNameFor(model => model.TrainingAt)
+            </dt>
+            <dd class="col-12">
+                @Html.DisplayFor(model => model.TrainingAt)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete" class="links-wrapper">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Usuń" class="btn btn-danger" />
+            <a asp-action="Index" class="back-to-list-link">Wróć do listy</a>
+        </form>
+    </div>
+</div>
